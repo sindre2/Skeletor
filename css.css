@@ -1,0 +1,69 @@
+/* --- General settings for the body/main container --- */
+
+.flex
+{
+    margin: 0;
+    padding: 0;
+
+    align-content: center;
+
+    background-image: url("./Image/skeletor.jpg");
+    background-size: cover;
+
+    height: 110vh;
+}
+
+/* --- END --- */
+
+
+
+/* Repeated flex-settings gathered on one spot to avoid dry-ness */
+
+body .flex, .container, .btn
+{
+    display: flex;
+}
+
+body .flex, .btn
+{
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* --- END --- */
+
+
+/* --- Container for all the buttons --- */
+
+.container
+{
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 500px;
+    height: 500px;
+}
+
+/* --- END --- */
+
+
+
+/* --- Settings for the buttons. Also with hover settings. --- */
+
+.btn
+{
+    width: 130px;
+    height: 130px;
+    background-color: brown;
+    margin: 1rem;
+    color: white;
+}
+
+.btn:hover
+{
+    cursor: pointer;
+    background-color: gray;
+}
+
+/* --- END --- */
