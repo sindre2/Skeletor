@@ -1,5 +1,9 @@
 /* --- General settings for the body/main container --- */
 
+body {
+    overflow: hidden;
+}
+
 .flex
 {
     margin: 0;
