@@ -2,19 +2,18 @@
 
 body {
     overflow: hidden;
+    height: 100vh;
 }
 
 .flex
 {
     margin: 0;
     padding: 0;
-
-    align-content: center;
-
     background-image: url("./Image/skeletor.jpg");
     background-size: cover;
-
-    height: 100vh;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 /* --- END --- */
@@ -23,7 +22,7 @@ body {
 
 /* Repeated flex-settings gathered on one spot to avoid dry-ness */
 
-body .flex, .container, .btn
+.flex, .container, .btn
 {
     display: flex;
 }
@@ -48,7 +47,7 @@ body .flex, .btn
     width: 500px;
     height: 500px;
 
-    margin-right: 50%;
+    /* margin-right: 50%; */
 }
 
 /* --- END --- */
@@ -62,8 +61,11 @@ body .flex, .btn
     width: 130px;
     height: 130px;
     background-color: brown;
+    border-radius: 15px;
     margin: 1rem;
     color: white;
+    opacity: 0.75;
+    text-shadow: black 2px 2px;
 }
 
 .btn:hover
@@ -73,3 +75,37 @@ body .flex, .btn
 }
 
 /* --- END --- */
+
+@media screen and (max-width: 720px) {
+    body{
+        background-size: auto;
+        /* background-position: center; */
+        /* background-size: 720px auto; */
+        background-repeat: repeat-y;
+    }
+    .container {
+        height: 80%;
+        width: 200px;
+        /* border: 2px solid #7b1f1f; */
+        padding: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 505px) {
+    .container {
+        overflow-y: scroll;
+    }
+    .flex {
+        height: 100%;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .container {
+        height: 80%;
+        width: 100%;
+        /* border: 2px solid #7b1f1f; */
+        padding: 2rem 0;
+        overflow-y: scroll;
+    }
+}
